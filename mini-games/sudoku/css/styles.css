@@ -1,0 +1,50 @@
+
+html {
+  box-sizing: border-box;
+	font-size: 62.5%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (min-width:768px) {
+  .container {
+    width: 120rem;
+    padding: 1rem;
+  }
+}
+
+.container {
+  margin: 5rem auto;
+  text-align: center;
+  width: 90%;
+}
+
+h2 {
+  font-size: 4rem;  
+}
+
+table {
+  font-size: 4rem;
+  font-weight: bold;
+  border: 4px solid black;
+  border-collapse: collapse;
+  margin: auto;
+  background-color: white;
+  padding: 0px;
+}
+
+td {
+  width: 65px;
+  height: 65px;
+  vertical-align: middle;
+  border: 1px solid black;
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+}
+
