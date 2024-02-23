@@ -3,5 +3,7 @@
 [user]
     name = grejudev
     email = grejudev@gmail.com
+[core]
+	sshCommand= ssh -i ~/.ssh/id_rsa_grejudev
 
 

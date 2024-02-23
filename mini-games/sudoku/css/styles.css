@@ -1,4 +1,16 @@
+/* Variables */
+:root {
+  --border-bold: 5px solid black;
+  --border-normal: 1px solid black;
+  --azul-oscuro: 4, 41, 64;
+  --verde-cerceta: 0, 92, 83;
+  --verde-manzana: 159, 193, 49;
+  --verde-lima: 219, 242, 39;
+  --verde-seco: 214, 213, 131;
+  --blanco: 255, 255, 255;
+}
 
+/* Globals */
 html {
   box-sizing: border-box;
 	font-size: 62.5%;
@@ -12,6 +24,10 @@ html {
   }
 }
 
+h2 {
+  font-size: 4rem;  
+}
+
 @media (min-width:768px) {
   .container {
     width: 120rem;
@@ -19,20 +35,18 @@ html {
   }
 }
 
+/* Container */
 .container {
-  margin: 5rem auto;
+  margin: 3rem auto;
   text-align: center;
-  width: 90%;
+  width: 95%;
 }
 
-h2 {
-  font-size: 4rem;  
-}
-
+/* Sudoku */
 table {
   font-size: 4rem;
   font-weight: bold;
-  border: 4px solid black;
+  border: var(--border-bold);
   border-collapse: collapse;
   margin: auto;
   background-color: white;
@@ -40,11 +54,137 @@ table {
 }
 
 td {
-  width: 65px;
-  height: 65px;
+  width: 5.5rem;
+  height: 5.5rem;
+  min-width: 5.5rem;
+  min-height: 5.5rem;
+  max-width: 5.5rem;
   vertical-align: middle;
-  border: 1px solid black;
+  border: var(--border-normal);
   background-color: rgb(255, 255, 255);
   margin: auto;
+  
 }
 
+td:active{
+  background-color: rgba(255,215,0,0.5);
+}
+
+td:nth-child(3), td:nth-child(6) {
+  border-right: var(--border-bold);
+}
+tr:nth-child(3), tr:nth-child(6) {
+  border-bottom: var(--border-bold);
+}
+
+/* Controls */
+.controls-container {
+  margin: 3rem 0;;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Controls */
+.main-controls {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 0.5rem;
+  min-width: max-content;
+}
+
+.main-controls button {
+  font-size: 2rem;
+  font-weight: 550;
+  border-radius: 0.8rem;
+  margin: 0;
+  padding: 0.8rem;
+}
+
+.main-controls-customCell, .main-controls-general {
+  background-color: rgb(var(--blanco));
+  color: rgb(var(--verde-cerceta));
+}
+
+.main-controls-customCell:hover, .main-controls-general:hover {
+  background-color: rgba(var(--verde-cerceta), 0.2);
+}
+
+.main-controls-numbers {
+  background-color: rgb(var(--verde-cerceta));
+  color: rgb(var(--blanco));
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.main-controls-numbers:hover {
+  background-color: rgba(var(--verde-cerceta), 0.6);
+}
+
+.button-normal {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+.button-corner {
+  grid-column: 1 / 3;
+  grid-row: 2;
+}
+.button-center {
+  grid-column: 1 / 3;
+  grid-row: 3;
+}
+.button-color {
+  grid-column: 1 / 3;
+  grid-row: 4;
+}
+
+.button-delete {
+  grid-column: 3 / 6;
+  grid-row: 4;
+}
+
+
+/* Auxiliary Controls */
+.auxiliary-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.auxiliary-controls button {
+  font-size: 2rem;
+  font-weight: 550;
+  border-radius: 0.8rem;
+  margin: 0;
+  padding: 0.8rem;
+}
+
+.auxiliary-controls-general {
+  background-color: rgb(var(--blanco));
+  color: rgb(var(--verde-cerceta));
+}
+
+.auxiliary-controls-general:hover {
+  background-color: rgba(var(--verde-cerceta), 0.2);
+}
+/* .button-undo {
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+.button-restart {
+  grid-column: 1 / 2;
+  grid-row: 2;
+}
+.button-redo {
+  grid-column: 2 / 3;
+  grid-row: 1;
+}
+.button-check {
+  grid-column: 2 / 3;
+  grid-row: 2;
+} */

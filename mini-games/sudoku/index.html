@@ -10,107 +10,139 @@
     <!--Sudoku-->
     <div class="container">
       <h2><span>Easy</span> Level</h2>
-      <table>
-        <tr>
-          <td class="cell">1</td>
-          <td>2</td>
-          <td>3</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </table>
+      <div class="sudoku">
+        <table>
+          <tr>
+            <td class="cell">1</td>
+            <td>2</td>
+            <td>3</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <!-- /Sudoku -->
+
+      <!-- Controls -->
+      <div class="controls-container">
+        <div class="main-controls">
+            <button class="main-controls-customCell button-normal">Normal</button>
+            <button class="main-controls-customCell button-corner">Corner</button>
+            <button class="main-controls-customCell button-center">Center</button>
+            <button class="main-controls-customCell button-color">Colour</button>
+            <button class="main-controls-customCell button-delete">Delete</button>
+          
+            <button class="main-controls-numbers button-1">1</button>
+            <button class="main-controls-numbers button-2">2</button>
+            <button class="main-controls-numbers button-3">3</button>
+            <button class="main-controls-numbers button-4">4</button>
+            <button class="main-controls-numbers button-5">5</button>
+            <button class="main-controls-numbers button-6">6</button>
+            <button class="main-controls-numbers button-7">7</button>
+            <button class="main-controls-numbers button-8">8</button>
+            <button class="main-controls-numbers button-9">9</button>
+        </div>
+        <div class="auxiliary-controls">
+          <button class="auxiliary-controls-general button-undo">Undo</button>
+          <button class="auxiliary-controls-general button-redo">Redo</button>
+          <button class="auxiliary-controls-general button-restart">Restart</button>
+          <button class="auxiliary-controls-general button-check">Check</button>
+        </div> 
+      </div>
+      <!-- /Controls -->
     </div>
   </body>
 </html>
+
