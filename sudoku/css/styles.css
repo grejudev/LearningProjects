@@ -8,6 +8,11 @@
   --verde-lima: 219, 242, 39;
   --verde-seco: 214, 213, 131;
   --blanco: 255, 255, 255;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  overflow-y: auto;
+  color-scheme: dark light;
 }
 
 /* Globals */
@@ -27,23 +32,36 @@ html {
 h2 {
   font-size: 4rem;  
 }
-
+/* Container */
 @media (min-width:768px) {
   .container {
-    width: 120rem;
-    padding: 1rem;
+    background-color: violet;
+    max-width: 140rem;
   }
 }
-
-/* Container */
 .container {
   margin: 3rem auto;
   text-align: center;
   width: 95%;
 }
 
+.sudoku__controls {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 1rem 3rem;
+}
+
 /* Sudoku */
+.sudoku {
+  /* position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; */
+}
+
 table {
+  display: flex;
   font-size: 4rem;
   font-weight: bold;
   border: var(--border-bold);
@@ -51,19 +69,19 @@ table {
   margin: auto;
   background-color: white;
   padding: 0px;
+  cursor: pointer;
+  aspect-ratio: 1;
 }
 
 td {
-  width: 5.5rem;
-  height: 5.5rem;
-  min-width: 5.5rem;
-  min-height: 5.5rem;
-  max-width: 5.5rem;
+  width: 6rem;
+  height: 6rem;
   vertical-align: middle;
   border: var(--border-normal);
   background-color: rgb(255, 255, 255);
   margin: auto;
-  
+  color: black;
+  aspect-ratio: 1;
 }
 
 td:active{
@@ -79,7 +97,7 @@ tr:nth-child(3), tr:nth-child(6) {
 
 /* Controls */
 .controls-container {
-  margin: 3rem 0;;
+  margin: 1.5rem 0;;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -150,7 +168,7 @@ tr:nth-child(3), tr:nth-child(6) {
 /* Auxiliary Controls */
 .auxiliary-controls {
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   align-items: stretch;
   justify-content: space-between;
   gap: 0.5rem;
@@ -188,3 +206,7 @@ tr:nth-child(3), tr:nth-child(6) {
   grid-column: 2 / 3;
   grid-row: 2;
 } */
+
+.dark-background {
+  color-scheme: dark;
+}
